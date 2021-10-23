@@ -5,8 +5,9 @@ const output = document.querySelector("#output")
 
 submitButton.addEventListener("click",()=>{
   const array = JSON.parse(`[${input.value}]`)
+  output.innerHTML = `Array you entered is: ${array}<br>`
   SelectionSort(array)
-  output.innerHTML = `Sorted array is: ${array}`
+  output.innerHTML += `<br>Sorted array is: ${array}`
   input.value = ""
 })
 
